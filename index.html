@@ -1,0 +1,460 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="robots" content="follow">
+	<meta name="author" content="Richard Mattka">
+	<meta name="copyright" content="2024">
+	<meta name="viewport"
+		content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>Personas Sinteticas</title>
+
+
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/slides.css">
+	<link rel="stylesheet" href="https://use.typekit.net/wvh2fzc.css">
+	<link rel="stylesheet" href="css/aos.css" />
+
+	<!-- end styles -->
+
+	<!-- favicons -->
+	<link rel="Shortcut Icon" type="image/ico" href="icon.png">
+	<link rel="apple-touch-icon" href="icon.png">
+	<!-- favicons -->
+
+	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="https://www.youtube.com/iframe_api"></script>
+
+
+	<!-- load libs -->
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/vanilla-tilt.min.js"></script>
+	<script src="libs/instafeed.min.js"></script>
+	<script src="libs/three.min.js"></script>
+	<script src="libs/stats.min.js"></script>
+	<script src="libs/FBXLoader.js"></script>
+	<script src="libs/inflate.min.js"></script>
+	<script src="libs/aos.js"></script>
+
+
+
+	<script src="libs/howler.min.js"></script>
+	<script src="libs/TweenMax.min.js"></script>
+
+	<!-- load core scripts -->
+	<script src="js/main.js"></script>
+	<script src="js/views.js"></script>
+	<script src="js/webgl.js"></script>
+	<script src="data/site.js"></script>
+	<script src="libs/utils.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+	<div class="background" id="background"></div>
+	<canvas id="webgl"></canvas>
+	<!--<video  id="webGLVideo1" crossOrigin="anonymous" webkit-playsinline style="display:none" playsinline class='background-video' src='' loop preload muted="true"></video>-->
+
+	<!-- home -->
+	<div class="home page menu-item menu-personas" data-link="personas">
+		<div class="titles" data-aos-duration="4000" data-aos-delay="200">
+
+			<img src="../assets/images/logo-ntt.png" class="page-logo" data-aos-duration="2000" data-aos-delay="200">
+			<div class="page-title" data-aos-duration="2000" data-aos-delay="200"></div>
+			<div class="page-subtitle" data-aos-duration="2000" data-aos-delay="600"></div>
+		</div>
+	</div>
+	<!-- end home -->
+
+	<!-- personas -->
+
+
+	<div class="personas page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="slider-section">
+			<div class="slider">
+				<div class="slide active" id="slide1" style="background-color: #0d0d2b;">
+					<div class="slide-container" style="position: relative; height: 100%; width: 100%;">
+						<img src="./assets/person1.png" alt="Matías, Joven Estudiante, 22 Años">
+						<div class="slide-info">
+							<div class="slide-info-container">
+								<span class="status" style="background-color: #01fca1;"></span>
+								<div class="persona-status">
+									<h3>Matías, <br> Joven Estudiante, 22 Años</h3>
+									<button class="dialog-button" style="background-color: #1800fc;">
+										<img src="../assets/images/arrow-right.svg" alt="Iniciar conversación">
+									</button>
+								</div>
+							</div>
+							<div class="slide-popup" id="popup1" style="display: none;">
+								<div class="popup-content">
+									<p>Hola, soy Matías, un personaje de 22 años creado por el equipo de Experiencia Digital utilizando GenAI para este evento. Mi trabajo es representar a un segmento real de personas con características similares a las tuyas, ya sean datos sociodemográficos, aspectos psicológicos o hábitos específicos de consumo o uso del producto.</p>
+									<button class="close-popup">Conversemos</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide" id="slide2" style="background-color: #8525e5;">
+					<div class="slide-container" style="position: relative; height: 100%; width: 100%;">
+						<img src="./assets/person2.png" alt="María, Profesionista, 28 Años">
+						<div class="slide-info">
+							<div class="slide-info-container">
+								<span class="status" style="background-color: #00e676;"></span>
+								<div class="persona-status">
+									<h3>María, <br> Profesionista, 28 Años</h3>
+									<button class="dialog-button" style="background-color: #8e1b7f;">
+										<img src="../assets/images/arrow-right.svg" alt="Iniciar conversación">
+									</button>
+								</div>
+							</div>
+							<div class="slide-popup" id="popup2" style="display: none;">
+								<div class="popup-content">
+									<p>Hola, soy María, una profesional de 28 años creada por el equipo de Experiencia Digital utilizando GenAI para este evento. Estoy aquí para representar a un segmento específico de personas como tú, con características similares que pueden ser datos demográficos, psicológicos, o hábitos de uso del producto.</p>
+									<button class="close-popup">Conversemos</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide" id="slide3" style="background-color: #301376;">
+					<div class="slide-container" style="position: relative; height: 100%; width: 100%;">
+						<img src="./assets/person3.png" alt="Ana, Jubilada, 65 Años">
+						<div class="slide-info">
+							<div class="slide-info-container">
+								<span class="status" style="background-color: #ff0000;"></span>
+								<div class="persona-status">
+									<h3>Ana, <br> Jubilada, 65 Años</h3>
+									<button class="dialog-button" style="background-color: #1800fc;">
+										<img src="../assets/images/arrow-right.svg" alt="Iniciar conversación">
+									</button>
+								</div>
+							</div>
+							<div class="slide-popup" id="popup3" style="display: none;">
+								<div class="popup-content">
+									<p>Hola, soy Ana, una jubilada de 65 años creada por el equipo de Experiencia Digital utilizando GenAI para este evento. Represento a un segmento de personas con características similares a las tuyas, como datos demográficos, aspectos psicológicos, o hábitos específicos de consumo.</p>
+									<button class="close-popup">Conversemos</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-content"></div>
+		<div class="list"></div>
+	</div>
+	<!-- end personas -->
+
+	<!-- work -->
+	<div class="work page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="page-content"></div>
+		<div class="list"></div>
+	</div>
+	<!-- end work -->
+
+
+	<!-- prototypes -->
+	<div class="prototypes page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="page-content"></div>
+		<div class="list"></div>
+	</div>
+	<!-- end prototypes -->
+
+	<!-- art -->
+	<div class="art page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="page-content"></div>
+		<div class="list"></div>
+	</div>
+	<!-- end art -->
+
+	<!-- press -->
+	<div class="press page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="page-content"></div>
+		<div class="list"></div>
+		<div class="interviews-title section-title"></div>
+		<div class="interviews-list list"></div>
+
+	</div>
+	<!-- end press -->
+
+
+	<!-- about -->
+	<div class="info page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="page-content"></div>
+		<div data-aos='zoom-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+			data-aos-delay='50' class="feature">
+			<div class="feature-content"></div>
+		</div>
+		<div data-aos='fade-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+			data-aos-delay='50' class="bio-title section-title"></div>
+		<div data-aos='fade-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+			data-aos-delay='50' class="bio"></div>
+		<div class="awards-block info-block">
+			<div data-aos='fade-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+				data-aos-delay='50' class="awards-title section-title"></div>
+			<div class="awards-list"></div>
+		</div>
+		<div class="clients-block info-block">
+			<div data-aos='fade-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+				data-aos-delay='50' class="clients-title section-title"></div>
+			<div class="clients-list"></div>
+		</div>
+		<div data-aos='fade-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+			data-aos-delay='50' class="instafeed-title section-title"></div>
+		<div data-aos='fade-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+			data-aos-delay='50' id='instafeed'></div>
+		<!--
+		<div class="twitter-title section-title"></div>
+		
+		<a class="twitter-timeline" data-width="400" data-height="400" data-theme="dark" data-chrome='noheader, nofooter,  transparent, noscrollbar'  data-link-color="#2B7BB9" href="https://twitter.com/synergyseeker?ref_src=twsrc%5Etfw">Tweets by synergyseeker</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		-->
+		<div class="social-block info-block">
+			<div data-aos='fade-in' data-aos-easing='ease-in-out' data-aos-offset='50' data-aos-duration='1000'
+				data-aos-delay='50' class="social-title section-title"></div>
+			<div class="social-list"></div>
+		</div>
+
+	</div>
+	<!-- end about -->
+
+	<!-- contact-->
+	<div class="contact page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="page-content"></div>
+		<div class="list"></div>
+		<div class="locations-title"></div>
+		<div class="locations"></div>
+		<div class="links"></div>
+	</div>
+	<!-- end contact -->
+
+
+	<!-- work detail -->
+	<div class="work-detail page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="feature" data-aos='fade-in'>
+			<div class="feature-content"></div>
+		</div>
+		<div class="next-button" data-aos='fade-left'>
+			<img class="next-button-circle" src="assets/images/circle.svg" />
+			<img class="next-button-arrow" src="assets/images/arrow.svg" />
+		</div>
+		<div class="client" data-aos='fade-in'></div>
+		<div class="role" data-aos='fade-in'></div>
+		<div class="content-title section-title" data-aos='fade-in'></div>
+
+		<div class="content" data-aos='fade-in'></div>
+
+		<div class="awards-block info-block" data-aos='fade-in'>
+			<div class="awards-title section-title"></div>
+			<div class="awards-list"></div>
+		</div>
+		<div class="press-block info-block" data-aos='fade-in'>
+			<div class="press-title section-title"></div>
+			<div class="press-list"></div>
+		</div>
+		<div class="links-block info-block" data-aos='fade-in'>
+			<div class="links-title"></div>
+			<div class="links-list"></div>
+		</div>
+		<div class="social-block info-block" data-aos='fade-in'>
+			<div class="social-title section-title"></div>
+			<div class="social-list">
+				<img class="social-link share-page-twitter list-item" src="assets/images/twitter.png" />
+				<img class="social-link share-page-facebook list-item" src="assets/images/facebook.png" />
+			</div>
+		</div>
+		<div class="media-block info-block" data-aos='fade-in'>
+			<div class="media-title section-title"></div>
+			<div class="media-list"></div>
+		</div>
+		<div class="related-title section-title" data-aos='fade-in'></div>
+		<div class="related-list" data-aos='fade-in'></div>
+		<div class="bottom-nav">
+			<div class="bottom-back">&#8672; prev</div>
+			<div class="bottom-up">back to work</div>
+			<div class="bottom-next">next &#8674;</div>
+		</div>
+	</div>
+	<!-- end work detail -->
+
+	<!-- press detail -->
+	<div class="press-detail page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="feature" data-aos='fade-in'>
+			<div class="feature-content"></div>
+		</div>
+		<div class="next-button" data-aos='fade-left'>
+			<img class="next-button-circle" src="assets/images/circle.svg" />
+			<img class="next-button-arrow" src="assets/images/arrow.svg" />
+		</div>
+		<div class="content-title section-title" data-aos='fade-in'></div>
+		<div class="content" data-aos='fade-in'></div>
+		<div class="links-block info-block" data-aos='fade-in'>
+			<div class="links-title"></div>
+			<div class="links-list"></div>
+		</div>
+		<div class="social-block info-block" data-aos='fade-in'>
+			<div class="social-title section-title"></div>
+			<div class="social-list">
+				<img class="social-link share-page-twitter list-item" src="assets/images/twitter.png" />
+				<img class="social-link share-page-facebook list-item" src="assets/images/facebook.png" />
+			</div>
+		</div>
+		<div class="media-block info-block" data-aos='fade-in'>
+			<div class="media-title section-title"></div>
+			<div class="media-list"></div>
+		</div>
+		<div class="related-title section-title" data-aos='fade-in'></div>
+		<div class="related-list" data-aos='fade-in'></div>
+		<div class="bottom-nav">
+			<div class="bottom-back">&#8672; prev</div>
+			<div class="bottom-up">back to press</div>
+			<div class="bottom-next">next &#8674;</div>
+		</div>
+	</div>
+	<!-- end press detail -->
+
+
+
+
+
+	<!-- prototypes detail -->
+	<div class="prototypes-detail page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="feature" data-aos='fade-in'>
+			<div class="feature-content"></div>
+		</div>
+		<div class="next-button" data-aos='fade-left'>
+			<img class="next-button-circle" src="assets/images/circle.svg" />
+			<img class="next-button-arrow" src="assets/images/arrow.svg" />
+		</div>
+		<!--<div class="client" data-aos='fade-in'></div>
+		<div class="role" data-aos='fade-in'></div>-->
+		<div class="content-title section-title" data-aos='fade-in'></div>
+
+		<div class="content" data-aos='fade-in'></div>
+
+		<div class="awards-block info-block" data-aos='fade-in'>
+			<div class="awards-title section-title"></div>
+			<div class="awards-list"></div>
+		</div>
+		<div class="press-block info-block" data-aos='fade-in'>
+			<div class="press-title section-title"></div>
+			<div class="press-list"></div>
+		</div>
+		<div class="links-block info-block" data-aos='fade-in'>
+			<div class="links-title"></div>
+			<div class="links-list"></div>
+		</div>
+		<div class="social-block info-block" data-aos='fade-in'>
+			<div class="social-title section-title"></div>
+			<div class="social-list">
+				<img class="social-link share-page-twitter list-item" src="assets/images/twitter.png" />
+				<img class="social-link share-page-facebook list-item" src="assets/images/facebook.png" />
+			</div>
+		</div>
+		<div class="media-block info-block" data-aos='fade-in'>
+			<div class="media-title section-title"></div>
+			<div class="media-list"></div>
+		</div>
+		<div class="related-title section-title" data-aos='fade-in'></div>
+		<div class="related-list" data-aos='fade-in'></div>
+		<div class="bottom-nav">
+			<div class="bottom-back">&#8672; prev</div>
+			<div class="bottom-up">back to prototypes</div>
+			<div class="bottom-next">next &#8674;</div>
+		</div>
+	</div>
+	<!-- end prototypes detail -->
+
+
+	<!-- art detail -->
+	<div class="art-detail page">
+		<div class="page-title" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="page-subtitle" data-aos='zoom-in' data-aos-duration="1000" data-aos-delay="400"></div>
+		<div class="feature" data-aos='fade-in'>
+			<div class="feature-content"></div>
+		</div>
+		<div class="next-button" data-aos='fade-left'>
+			<img class="next-button-circle" src="assets/images/circle.svg" />
+			<img class="next-button-arrow" src="assets/images/arrow.svg" />
+		</div>
+		<div class="content-title section-title" data-aos='fade-in'></div>
+
+		<div class="content" data-aos='fade-in'></div>
+
+		<div class="awards-block info-block" data-aos='fade-in'>
+			<div class="awards-title section-title"></div>
+			<div class="awards-list"></div>
+		</div>
+		<div class="press-block info-block" data-aos='fade-in'>
+			<div class="press-title section-title"></div>
+			<div class="press-list"></div>
+		</div>
+		<div class="links-block info-block" data-aos='fade-in'>
+			<div class="links-title"></div>
+			<div class="links-list"></div>
+		</div>
+		<div class="social-block info-block" data-aos='fade-in'>
+			<div class="social-title section-title"></div>
+			<div class="social-list">
+				<img class="social-link share-page-twitter list-item" src="assets/images/twitter.png" />
+				<img class="social-link share-page-facebook list-item" src="assets/images/facebook.png" />
+			</div>
+		</div>
+		<div class="media-block info-block" data-aos='fade-in'>
+			<div class="media-title section-title"></div>
+			<div class="media-list"></div>
+		</div>
+		<div class="related-title section-title" data-aos='fade-in'></div>
+		<div class="related-list" data-aos='fade-in'></div>
+		<div class="bottom-nav">
+			<div class="bottom-back">&#8672; prev</div>
+			<div class="bottom-up">back to art</div>
+			<div class="bottom-next">next &#8674;</div>
+		</div>
+	</div>
+	<!-- end art detail -->
+
+
+	<!-- loader -->
+	<div class="loader"></div>
+	<!--<img class="loader-icon" src='assets/images/loader.gif' />-->
+	<!-- end loader -->
+
+	<div class="footer-sound">
+		<span id="bar-1" class="sbar"></span>
+		<span id="bar-2" class="sbar"></span>
+		<span id="bar-3" class="sbar"></span>
+		<span id="bar-4" class="sbar"></span>
+	</div>
+	<div id="reel">
+		<div class="reel-video"></div>
+		<div class="close-button close"></div>
+	</div>
+
+	<script>APP.init();</script>
+</body>
+
+</html>
